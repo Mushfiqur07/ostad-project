@@ -1,392 +1,271 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-
 :root {
-  --primary-color: #149191;
-  --text-light: #EEEEEE;
-  --dark-bg: #222831;
+  --primary: #00E5BE;
+  --dark: #1E2530;
+  --gray: #2A323F;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--dark-bg) !important;
-  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-.File-header {
-  width: 100%;
-  border-bottom: 1px solid #E8D7D73D;
-  padding: 1rem 0;
+/* Navbar Styles */
+.navbar {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.saul {
+.navbar-brand {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 35.57px;
-  color: var(--text-light);
+  font-size: 1.5rem;
 }
 
 .nav-link {
-  color: var(--text-light) !important;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem !important;
 }
 
-.nav-link:hover {
-  color: var(--primary-color) !important;
-}
-
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
+/* Hero Section */
+.hero {
   position: relative;
-  left:70px;
+  overflow: hidden;
 }
 
-.creative-text {
-  font-size: 96px;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 2rem;
-  color: var(--text-light);
+.hero h1 {
+  font-size: 5rem;
+  line-height: 1.1;
 }
 
-.designer-text {
-  color: var(--primary-color);
-}
-
-.buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.btn-hire {
-  background-color: var(--primary-color) !important;
-  color: var(--text-light) !important;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-weight: 700;
-}
-
-.btn-hire:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(20, 145, 145, 0.3);
-}
-
-.btn-cv {
-  color: var(--text-light) !important;
-  background: transparent;
-  border: 2px solid var(--primary-color) !important;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.btn-cv:hover {
-  background-color: var(--primary-color);
-  transform: translateY(-2px);
-}
-
-.first-img{
-    position: relative;
-    width: 450px;
-    height:472px;
-  border:none;
-  left:100px;
-}
-.img-fluid {
-    width: 400px;
-    height:472px;
-    left:70px;
-}
-
-.icon {
-    position: relative;
-  width: 96px;
-  height: 96px;
-  top: 20rem;
-  left:260px;
-}
-
-/* About Section */
-.about-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background-color: var(--dark-bg);
-  padding: 4rem 0;
-}
-
-.about-content {
-  margin-bottom: 2rem;
-}
-
-.about-content h1 {
-  font-weight: 700;
-  font-size: 90px;
-  color: var(--text-light);
-  margin-bottom: 2rem;
-}
-
-.me {
-  color: var(--primary-color) !important;
-}
-
-.paragraph {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-light);
-  margin-bottom: 1.5rem;
-}
-
-.bg-fluid {
-    background-image: url('../assets/doodle items.png');  
-    background-size: cover; /
-    background-position: center; 
-    background-repeat: no-repeat;
-    width: 100%; 
-    min-height: 400px; 
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 3rem;
   }
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+}
+
+.btn-primary:hover {
+  background-color: #00c4a3;
+  border-color: #00c4a3;
+}
+
+.btn-outline-light {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+}
+
+
 
 /* Portfolio Section */
-.bg-content {
-  background-image: url('../assets/doodle items.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  padding: 4rem 0;
+.portfolio-filters .btn {
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
-.section-header {
-  margin-bottom: 3rem !important;
+.portfolio-item {
+  background: var(--gray);
+  
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.section-header h2 {
-  font-weight: 700;
-  font-size: 64px;
+.portfolio-item:hover {
+  transform: translateY(-5px);
 }
 
-.text-accent {
-  color: var(--primary-color);
-}
-
-.filters {
-  margin-bottom: 3rem;
-}
-
-.filter-btn {
-  background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--text-light);
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background-color: var(--primary-color);
-}
-
-.project-item {
-  transition: transform 0.3s ease;
-  margin-bottom: 2rem;
-}
-
-.project-item:hover {
-  transform: translateY(-10px);
-  filter:drop-shadow(#393E46)
-}
-
-.project-img {
+.portfolio-item img {
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px #393E46;
- 
-  
-
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  padding: 3rem;
 }
 
-.illustration{
-    position: relative;
-    border:none;
-    left:100px;
-}
-
-.lustration img{
-    position: relative;
-    border:none;
-    left:100px;
-
+.portfolio{
+    background-image: url('../assets/doodle\ items\ \(1\).png');
 }
 
 
+/* Contact Form */
+.contact-form .form-control {
+  background-color: var(--gray);
+  border: none;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+}
 
-@media (max-width: 1200px) {
-  .creative-text {
-    font-size: 72px;
+.contact-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form .form-label {
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+.social-links .social-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+/* Scroll Down Arrow */
+.scroll-down {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow-down {
+  width: 40px;
+  height: 40px;
+  background: var(--gray);
+  border-radius: 8px;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+.arrow-down::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
   }
-  
-  .about-content h1 {
-    font-size: 72px;
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
   }
 }
 
-@media (max-width: 992px) {
-  .creative-text {
-    font-size: 56px;
+/* Responsive Design */
+@media (max-width: 991px) {
+  .navbar-collapse {
+      background: var(--gray);
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-top: 1rem;
   }
   
-  .about-content h1 {
-    font-size: 56px;
-  }
-  
-  .section-header h2 {
-    font-size: 48px;
+  .hero h1 {
+      font-size: 4rem;
   }
 }
 
 @media (max-width: 768px) {
-  .creative-text {
-    font-size: 42px;
+  .hero h1 {
+      font-size: 3rem;
   }
   
-  .about-content h1 {
-    font-size: 42px;
+  .footer-nav, .social-links {
+      text-align: center;
+      margin: 1rem 0;
   }
   
-  .buttons {
-    flex-direction: column;
+  .social-links .social-link {
+      margin: 0 0.75rem;
   }
-  
-  .icon {
-    width: 72px;
-    height: 72px;
+
+  .contact-form .row {
+      margin: 0;
+  }
+
+  .contact-form .col-md-6 {
+      padding: 0;
+      margin-bottom: 1rem;
+  }
+
+  .contact-form .col-md-6:last-child {
+      margin-bottom: 0;
   }
 }
 
 @media (max-width: 576px) {
-  .creative-text {
-    font-size: 36px;
+  .hero h1 {
+      font-size: 2.5rem;
   }
   
-  .about-content h1 {
-    font-size: 36px;
+  .portfolio-filters .btn {
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
   }
-  
-  .section-header h2 {
-    font-size: 36px;
+
+  .portfolio-item img {
+      height: 200px;
   }
 }
 
-.contact-content .highlight {
-    color: var(--primary-color);
-    display: block;
+.elips{
+  position: relative;
+  top:-8px;
+  right:14px
 }
 
-.contact-content .illustration {
-    margin-top: 3rem;
+
+/* About Section */
+
+.Its-me h2{
+  font-weight: 700;
+  width:332px;
+  
+}
+.about-image {
     position: relative;
-}
-
-.contact-content .person-img {
-    width: 200px;
-    height: auto;
-}
-
-
-
-
-.send-btn{
-    border-radius: 16px;
-    background-color: var(--primary-color);
-    border:none;
-
-}
-
-.contact-form {
-    background-color: rgba(42, 52, 65, 0.3);
-    padding: 2rem;
-    border-radius: 15px;
-    backdrop-filter: blur(20px);
-}
-
-.contact-form .form-group {
-    margin-bottom: 1.5rem;
-    display: flex;
-    gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
     padding: 1rem;
-    background-color: #2a3441;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: var(--text-light);
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    background-image:url('../assets/doodle\ items.png');
 }
 
-.contact-form textarea {
-    height: 200px;
-    resize: vertical;
+.about-image img {
+    border-radius: 1rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
+.progress {
+    background-color: var(--gray);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.contact-form {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 1rem;
-  backdrop-filter: blur(10px);
+.progress-bar {
+    transition: width 1s ease;
 }
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  color: var(--gray);
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.form-control {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--light);
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.form-control:focus {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: var(--primary);
-  box-shadow: 0 0 0 0.25rem rgba(0, 191, 179, 0.25);
-  color: var(--light);
-}
-
-.form-control::placeholder {
-  color: rgba(255, 255, 255, 0.4);
-}
-
 
 
 .footer {
@@ -419,23 +298,9 @@ body {
   color: var(--primary);
 }
 
-.contact-content{
-  text:white;
+.footer-links{
+  color:antiquewhite;
 }
-.contact-content h1{
-  font-weight: 800;
-  font-size: 70-px;
-}
-  
-
-.ellip{
-  position: relative;
-
-  height: 24px;
-  right: 6px;
-  top:-10px;
-}.ellip img{
-  width: 143px;
-  height: 24px;
-  
+.footer-links a{
+  color:antiquewhite;
 }
